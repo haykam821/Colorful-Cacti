@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "colorfulcacti",
+	"version": "${version}",
+	"name": "Colorful Cacti",
+	"description": "Makes cacti generate with different colors.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Colorful-Cacti#readme",
+		"issues": "https://github.com/haykam821/Colorful-Cacti/issues"
+	},
+	"entrypoints": {
+		"main": [
+			"io.github.haykam821.colorfulcacti.Main"
+		],
+		"client": [
+			"io.github.haykam821.colorfulcacti.ClientMain"
+		]
+	},
+	"mixins": [
+		"colorfulcacti.mixin.json"
+	],
+	"license": "MIT",
+	"icon": "assets/colorfulcacti/icon.png",
+	"depends": {
+		"fabricloader": ">=0.4.0",
+		"fabric": "*"
+	}
+}
