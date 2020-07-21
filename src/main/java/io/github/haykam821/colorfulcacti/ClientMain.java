@@ -8,11 +8,12 @@ public class ClientMain implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		for (CactiTypes type : CactiTypes.values()) {
+			int color = type.block.getColor().getFireworkColor();
 			ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-				return type.block.getColor().getFireworkColor();
-			}, type.block);
+				return color;
+			}, type.block, type.flowerPot);
 			ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-				return type.block.getColor().getFireworkColor();
+				return color;
 			}, type.item);
 		}
 	}

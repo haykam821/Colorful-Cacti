@@ -3,6 +3,7 @@ package io.github.haykam821.colorfulcacti.block;
 import io.github.haykam821.colorfulcacti.Main;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -30,6 +31,7 @@ public enum CactiTypes {
 
 	public DyedCactusBlock block;
 	public Item item;
+	public FlowerPotBlock flowerPot;
 
 	private CactiTypes(String path, DyeColor color) {
 		Identifier id = new Identifier(Main.MOD_ID, path);
@@ -39,6 +41,12 @@ public enum CactiTypes {
 
 		this.item = new BlockItem(this.block, new Item.Settings().group(ItemGroup.DECORATIONS));
 		Registry.register(Registry.ITEM, id, this.item);
+
+		// Flower pot
+		Identifier flowerPotId = new Identifier(Main.MOD_ID, "potted_" + path);
+
+		this.flowerPot = new FlowerPotBlock(this.block, FabricBlockSettings.copy(Blocks.POTTED_CACTUS));
+		Registry.register(Registry.BLOCK, flowerPotId, this.flowerPot);
 	}
 
 	public static void initialize() {
