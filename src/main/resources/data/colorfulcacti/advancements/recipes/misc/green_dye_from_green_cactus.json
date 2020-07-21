@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"colorfulcacti:green_dye_from_green_cactus"
+		]
+	},
+	"criteria": {
+		"has_green_cactus": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "colorfulcacti:green_cactus"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "colorfulcacti:green_dye_from_green_cactus"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_green_cactus",
+			"has_the_recipe"
+		]
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"colorfulcacti:magenta_dye_from_magenta_cactus"
+		]
+	},
+	"criteria": {
+		"has_magenta_cactus": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "colorfulcacti:magenta_cactus"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "colorfulcacti:magenta_dye_from_magenta_cactus"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_magenta_cactus",
+			"has_the_recipe"
+		]
+	]
+}

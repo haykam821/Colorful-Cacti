@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"colorfulcacti:white_dye_from_white_cactus"
+		]
+	},
+	"criteria": {
+		"has_white_cactus": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "colorfulcacti:white_cactus"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "colorfulcacti:white_dye_from_white_cactus"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_white_cactus",
+			"has_the_recipe"
+		]
+	]
+}

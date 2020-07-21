@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "colorfulcacti:blue_cactus"
+	},
+	"result": "minecraft:blue_dye",
+	"experience": 1,
+	"cookingtime": 200
+}
